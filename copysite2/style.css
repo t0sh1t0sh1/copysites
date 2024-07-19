@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+}
+
+nav {
+  height: 250px;
+  width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+  padding: 4px;
+}
+
+.nav-title {
+  margin: 20px;
+}
+
+.nav-title > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  margin: 0px 10px;
+}
+
+.nav-menu a:hover {
+  opacity: 0.5;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.insta-icon {
+  height: 18px;
+  width: 18px;
+  display: block;
+}
+
+.main-img > img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.main-img-sp {
+  display: none;
+}
+
+/* main一括 */
+article {
+  width: 960px;
+  margin: 0px auto;
+  padding: 4%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 100px;
+}
+
+/* about */
+.about-contents {
+  margin-top: 80px;
+}
+
+/* Works */
+.works-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.works-img {
+  width: calc(92%/3);
+  height: auto;
+  padding: 10px;
+}
+
+.works-img > img {
+  width: 100%;
+}
+
+/* News */
+ul {
+  list-style: none;
+  margin-top: 80px;
+}
+
+li {
+  border-bottom: 1px solid #c8c8c8;
+  padding: 5px 0px 5px 10px;
+  display: flex;
+}
+
+.border-top {
+  border-top: 1px solid #c8c8c8;
+}
+
+.day {
+  margin-right: 80px;
+}
+
+/* Contact */
+.contact-wrap {
+  margin-top: 80px;
+}
+
+.contact-wrap div {
+  margin: 10px;
+}
+
+.contact-label {
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 50px;
+}
+
+textarea {
+  /* resize: none; */
+  width: 700px;
+  height: 200px;
+  padding: 12px;
+  border: 1px solid #c8c8c8;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.contact-input {
+  width: 700px;
+  height: 15px;
+  padding: 12px;
+  display: inline-block;
+  border: 1px solid #c8c8c8;
+}
+
+input:focus {
+  outline: none;
+}
+
+.contact-btn {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.contact-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+footer {
+  height: 36px;
+  margin: 0;
+  font-size: 0.5rem;
+  text-align: center;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+body {
+  margin: 0;
+}
+
+/* ヘッダー */
+nav {
+  display: block;
+  width: 375px;
+  height: 120px;
+  text-align: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  justify-content: center;
+}
+
+
+/* メインビジュアル */
+.main-img {
+  display: none;
+}
+
+.main-img-sp {
+  display: block;
+}
+
+.main-img-sp img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* main一括 */
+article {
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4%;
+}
+
+/* about */
+.about-contents {
+  margin-top: 40px;
+}
+
+/* Works */
+.works-flex {
+  width: 100%;
+  display: block;
+  margin-top: 40px;
+}
+
+.works-img {
+  width: 100%;
+  /* padding-bottom: 5px; */
+  margin: 0 auto;
+}
+
+/* News */
+ul {
+  /* margin-top: 40px; */
+  width: 100%;
+  margin: 40px 0 0 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  padding: 5px;
+}
+
+.day {
+  margin: 0;
+}
+
+/* Contact */
+.contact-wrap {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.contact-wrap div {
+  margin: 10px;
+}
+
+.contact-label {
+  margin-left: 0;
+}
+
+textarea {
+  width: 85%;
+}
+
+.contact-input {
+  width: 85%;
+}
+
+}
