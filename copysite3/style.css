@@ -1,0 +1,314 @@
+body {
+  font-family: "Noto Sans JP", "Noto Sans", sans-serif;
+  color: #333333;
+  margin: 0;
+  padding-top: 140px;
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* =========================
+ヘッダー
+======================== */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 11;
+  top: 0;
+  left: 0;
+}
+
+.site-title {
+  max-width: 1200px;
+  margin: 16px auto;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+header nav {
+  background-color: #333333;
+  font-size: 0.8rem;
+}
+
+.site-menu {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.site-menu li a {
+  margin-right: 60px;
+  color: white;
+}
+
+/* =========================
+ピックアップ
+======================== */
+#pickup {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.pickup-wrap {
+  width: 32%;
+  padding: 16px;
+}
+
+.pickup-wrap h2 {
+  font-size: 1rem;
+}
+
+.read-more {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.read-more a {
+  padding-bottom: 3px;
+  position: relative;
+}
+
+.read-more a::after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #333333;
+  transition: all 200ms ease;
+}
+
+.read-more a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+/* =========================
+コンテンツ全体
+======================== */
+#container {
+  max-width: 1200px;
+  padding: 16px;
+  margin: 0 auto;
+  display: flex;
+}
+
+aside {
+  max-width: 345px;
+  padding: 30px;
+}
+
+/* =========================
+メイン
+======================== */
+.main-wrap {
+  padding: 16px;
+}
+
+.main-wrap > ul {
+  display: flex;
+  font-size: 0.8rem;
+  padding-left: 0;
+}
+
+.main-wrap > ul li {
+  margin-right: 20px;
+}
+
+.main-wrap > p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* =========================
+サイド
+======================== */
+aside section {
+  margin-bottom: 60px;
+}
+
+.author {
+  text-align: center;
+}
+
+.author img {
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+}
+
+.author p {
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.ranking h3 {
+  text-align: center;
+}
+
+.ranking h4 {
+  margin-top: 4px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.archive h3 {
+  text-align: center;
+}
+
+.archive li {
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  /* border-bottom: 1px solid #777; */
+}
+
+.archive a::after {
+  content: '';
+  width: 345px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.archive-border::before {
+  content: '';
+  width: 345px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* =========================
+フッター
+======================== */
+footer {
+  background-color: #f7f7f7;
+  padding-bottom: 0px;
+  margin-top: 80px;
+}
+
+.content {
+  max-width: 1200px;
+  padding: 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 30%;
+}
+
+.item p, .item a{
+  font-size: 0.8rem;
+}
+
+.footer-about {
+  padding-left: 0;
+}
+
+.footer-menu {
+  padding-left: 12px
+}
+
+.footer-menu li {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+}
+
+.footer-menu a::after {
+  content: '';
+  width: 360px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footer-menu-border::before {
+  content: '';
+  width: 360px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.x-wrap {
+  height: 310px;
+}
+
+.copywrite {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+}
+
+
+/* =========================
+スマホ
+======================== */
+@media screen and (max-width: 768px) {
+/* ヘッダー */
+.site-title {
+  max-width: 375px;
+}
+
+.site-menu {
+  overflow-x: auto;
+}
+
+/* ピックアップ */
+#pickup {
+  display: block;
+}
+
+.pickup-wrap {
+  width: 375px;
+  margin: 0 auto;
+}
+
+/* コンテンツ全体 */
+#container {
+  display: block;
+}
+
+/* フッター */
+.content {
+  display: block;
+}
+
+.item {
+  width: 100%;
+  margin-bottom: 40px;
+}
+}
