@@ -1,0 +1,292 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 80px;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.5s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.wrapper {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page-title {
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* ========================== 
+ヘッダー
+========================== */
+#header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.site-title a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
+}
+
+#navi {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  color: #fff;
+  padding: 36px 50px;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+
+#navi a {
+  color: #fff;
+}
+
+#navi li {
+  margin-bottom: 14px;
+}
+
+/* 開いてる時(jQueryでクリック時openクラス付与) */
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+
+/* ハンバーガーボタン */
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.toggle-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.toggle-btn span:nth-child(1) {
+  top: 10px;
+}
+
+.toggle-btn span:nth-child(2) {
+  bottom: 10px;
+}
+
+.open .toggle-btn span {
+  background-color: #fff;
+}
+
+.open .toggle-btn span:nth-child(1) {
+  /* ユーザーがChrome拡張してた場合 */
+  -webkit-transform: translateY(4px) rotate(-45deg);
+  /* 一般 */
+  transform: translateY(4px) rotate(-45deg);
+}
+
+.open .toggle-btn span:nth-child(2) {
+  /* ユーザーがChrome拡張してた場合 */
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  /* 一般 */
+  transform: translateY(-4px) rotate(45deg);
+}
+
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+/* ========================== 
+トップページ
+========================== */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.viewmore {
+  display: block;
+  text-align: center;
+  margin: 40px;
+}
+
+
+/* ========================== 
+フッター
+========================== */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.footer-menu {
+  display: flex;
+}
+
+.footer-menu li {
+  margin-right: 30px;
+}
+
+#footer > p {
+  font-size: 0.7rem;
+}
+
+
+/* ========================== 
+Products
+========================== */
+.page-num {
+  display: flex;
+  justify-content: center;
+}
+
+.page-num li {
+  margin: 40px 20px;
+}
+
+
+/* ========================== 
+About
+========================== */
+#about {
+  height: 75vh;
+}
+
+#about > p {
+  display: block;
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 25px
+}
+
+
+/* ========================== 
+Company
+========================== */
+.information {
+  max-width: 600px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.information dl {
+  display: flex;
+}
+
+.information dl > dt {
+  margin: 20px 60px 20px 4px;
+  width: 20%;
+}
+
+.information dl > dd {
+  margin-top: 20px;
+}
+
+.info-border {
+  border-bottom: 1px solid #DCDBDB;
+}
+
+iframe {
+  filter: grayscale(1);
+  margin-bottom: 80px;
+}
+
+
+/* ========================== 
+Item
+========================== */
+.item-wrap {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-img {
+  width: 50%;
+}
+
+.item-info {
+  width: 42%;
+}
+
+.item-info > p {
+  margin-bottom: 35px;
+}
+
+.item-info > dl {
+  display: flex;
+}
+
+.item-info dl > dt {
+  width: 30%;
+}
+
+.page-back {
+  display: block;
+  text-align: center;
+  margin: 60px;
+}
