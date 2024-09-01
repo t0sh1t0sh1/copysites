@@ -1,0 +1,387 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  position: relative;
+  padding-top: 80px;
+  height: 1000px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =====================
+ヘッダー
+=====================*/
+#header {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  padding: 20px 0 0 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+.site-title > a > img {
+  z-index: 10;
+}
+
+#navi {
+  width: 300px;
+  height: 100vh;
+  background-color: black;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.5s ease, left 0.5s ease;
+}
+
+.active #navi {
+  opacity: 1;
+  left: 0;
+}
+
+.nav-menu {
+  padding: 80px 25px 65px 25px;
+}
+
+.nav-menu li {
+  height: 65px;
+  line-height: 65px;
+  border-bottom: 1px solid white;
+}
+
+.nav-menu li:nth-of-type(1) {
+  border-top: 1px solid white;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.sns {
+  padding: 0px 25px;
+}
+
+.sns li {
+  margin-bottom: 16px;
+}
+
+.sns li a {
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+/* ボタン */
+.toggle-btn {
+	/*ボタンを１辺30pxの正方形にする*/
+  width: 30px;
+  height: 24px;
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  /*カーソルを指にする*/
+  cursor: pointer;
+  z-index: 30;
+  transition: 0.3s;
+}
+
+/*縦２pxの横棒作り*/
+.toggle-btn span {
+  display: block;
+  /*toggle-btnに依存*/
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+/*要素1番目の横棒*/
+.toggle-btn span:nth-child(1) {
+  top: 2px;
+}
+
+/*要素2番目の横棒*/
+.toggle-btn span:nth-child(2) {
+  top: 12px;
+}
+
+/*要素3番目の横棒*/
+.toggle-btn span:nth-child(3) {
+  top: 22px;
+}
+
+.active .toggle-btn span:nth-child(1) {
+  /* ユーザーがChrome拡張してた場合 */
+  -webkit-transform: translateY(10px) rotate(-405deg);
+  background-color: white;
+  /* 一般 */
+  transform: translateY(10px) rotate(-405deg);
+  background-color: white;
+}
+
+.active .toggle-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.active .toggle-btn span:nth-child(3) {
+  /* ユーザーがChrome拡張してた場合 */
+  -webkit-transform: translateY(-10px) rotate(405deg);
+  background-color: white;
+  /* 一般 */
+  transform: translateY(-10px) rotate(405deg);
+  background-color: white;
+}
+
+
+/* マスク */
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+.active #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* =====================
+メインビデオ
+=====================*/
+.video {
+  width: 100%;
+}
+
+.video > video {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+/* =====================
+PICK UP
+=====================*/
+.section-title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#pickup {
+  width: 100%;
+  padding: 100px 0 50px 0;
+}
+#pickup .slick-area {
+  font-size: 0;
+}
+#pickup .slick-area li {
+  padding: 0 30px;
+}
+
+
+/* =====================
+FEATURE
+=====================*/
+#feature {
+  max-width: 1200px;
+  margin: 80px auto 50px auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.item {
+  box-shadow: 0 0 12px gray;
+}
+
+.item img {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.item .slideIn {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.7s;
+  transition-delay: 0.1s;
+}
+
+.item-txt {
+  padding: 25px;
+}
+
+.category {
+  font-size: 0.8rem;
+  margin-bottom: 25px;
+}
+
+#feature h3 {
+  font-size: 0.9rem;
+}
+
+.date {
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 25px;
+}
+
+
+/* =====================
+CONTACT
+=====================*/
+#contact {
+  background-color: #000;
+  color: white;
+}
+
+#contact .section-title {
+  padding-top: 50px;
+}
+
+#contact .content {
+  max-width: 1200px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.contact-info {
+  width: 50%;
+  margin-right: 100px;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.form-wrap > label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-wrap > input,
+.form-wrap > textarea {
+  background-color: white;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.send-btn {
+  color: white;
+  width: 200px;
+  border: 1px solid white;
+  padding: 12px;
+}
+
+.send-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+
+/* =====================
+フッター
+=====================*/
+footer {
+  background-color: #000;
+  color: white;
+  padding-bottom: 12px;
+}
+
+footer > p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+body {
+  width: 100vw;
+}
+
+/* =====================
+ヘッダー
+=====================*/
+#header {
+  padding: 20px 0 0 10px;
+}
+
+/* ボタン */
+.toggle-btn {
+  right: 30px;
+}
+
+
+/* =====================
+FEATURE
+=====================*/
+.grid {
+  width: 92%;
+  margin: 0 auto;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+
+/* =====================
+CONTACT
+=====================*/
+#contact .content {
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.contact-info {
+  width: 100%;
+}
+
+.contact-info p {
+  font-size: 1rem;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.send-btn {
+  width: 100%;
+}
+
+}
